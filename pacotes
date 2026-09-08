@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pacotes — e-kko Church</title>
+<meta name="description" content="Conheça os pacotes e-kko Church: Basic, Plus e Pro. Escolha o plano de pagamento e comece a organizar sua igreja.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">e-<span>kko</span></a>
+    <nav class="site-nav">
+      <a href="index.html#quem-somos">Quem somos</a>
+      <a href="index.html#church">e-kko Church</a>
+      <a href="pacotes.html">Pacotes</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+    <a class="btn btn-ghost" href="https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Tenho%20interesse%20na%20E-kko%20Church.">Falar com a gente</a>
+  </div>
+</header>
+
+<!-- ============ HERO DA PÁGINA DE PACOTES ============ -->
+<section class="plans-hero">
+  <div class="wrap">
+    <h1>Um plano pro tamanho da sua igreja.</h1>
+    <p>Da igreja que está começando à que já tem uma estrutura grande, tem um jeito certo de contar com a e-kko.</p>
+  </div>
+</section>
+
+<!-- ============ PACOTES ============ -->
+<section class="section" id="pacotes">
+  <div class="wrap">
+
+    <div class="pricing-grid">
+
+      <!-- Basic -->
+      <div class="price-card">
+        <div class="plan-name">e-kko Basic</div>
+        <p class="plan-sub">O essencial pra organizar sua igreja: agenda, escala e comunicação.</p>
+        <p class="plan-audience">Recomendado para igrejas com até 200 membros</p>
+        <div class="price-tag">R$ 100<span>/mês</span></div>
+        <p class="price-desc">Setup único de R$ 250 (parcelável em até 8x)</p>
+        <a class="btn btn-ghost" href="https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Basic%20da%20E-kko%20Church.">Falar com a gente</a>
+        <div class="includes-block">
+          <span class="includes-label">O que está incluso</span>
+          <ul class="includes">
+            <li>Agenda com segmentação por rede</li>
+            <li>Escala de voluntariado</li>
+            <li>Pedido de oração e testemunho</li>
+            <li>Cadastro completo de visitantes</li>
+            <li>Identidade visual personalizada</li>
+            <li class="not-included">Interface personalizada por rede</li>
+            <li class="not-included">Presença por QR code e metas</li>
+            <li class="not-included">Dashboard de liderança e de mídia</li>
+            <li class="not-included">Importação de escala por planilha</li>
+            <li class="not-included">Eventos com inscrição e pagamento parcelado</li>
+            <li class="not-included">Site institucional completo</li>
+            <li class="not-included">Agenda sincronizada entre app e site</li>
+            <li class="not-included">Manutenção prioritária</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Plus (destaque) -->
+      <div class="price-card featured">
+        <span class="plan-badge">Mais escolhido</span>
+        <div class="plan-name">e-kko Plus</div>
+        <p class="plan-sub">O app completo, com tudo que uma igreja de qualquer porte precisa no dia a dia.</p>
+        <p class="plan-audience">Recomendado para igrejas com mais de 200 membros</p>
+        <div class="price-tag">R$ 250<span>/mês</span></div>
+        <p class="price-desc">Setup único de R$ 750 (parcelável em até 8x)</p>
+        <a class="btn btn-primary" href="https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Plus%20da%20E-kko%20Church.">Falar com a gente</a>
+        <div class="includes-block">
+          <span class="includes-label">O que está incluso</span>
+          <ul class="includes">
+            <li>Agenda com segmentação por rede</li>
+            <li>Escala de voluntariado</li>
+            <li>Pedido de oração e testemunho</li>
+            <li>Cadastro completo de visitantes</li>
+            <li>Identidade visual personalizada</li>
+            <li>Interface personalizada por rede</li>
+            <li>Presença por QR code e metas</li>
+            <li>Dashboard de liderança e de mídia</li>
+            <li>Importação de escala por planilha</li>
+            <li>Eventos com inscrição e pagamento parcelado</li>
+            <li class="not-included">Site institucional completo</li>
+            <li class="not-included">Agenda sincronizada entre app e site</li>
+            <li class="not-included">Manutenção prioritária</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Pro -->
+      <div class="price-card">
+        <div class="plan-name">e-kko Pro</div>
+        <p class="plan-sub">Pra igrejas grandes: app completo + site institucional sincronizado.</p>
+        <p class="plan-audience">Recomendado para igrejas com mais de 200 membros</p>
+        <div class="price-tag">R$ 450<span>/mês</span></div>
+        <p class="price-desc">Setup único de R$ 1.400 (parcelável em até 8x)</p>
+        <a class="btn btn-ghost" href="https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Pro%20da%20E-kko%20Church.">Falar com a gente</a>
+        <div class="includes-block">
+          <span class="includes-label">O que está incluso</span>
+          <ul class="includes">
+            <li>Agenda com segmentação por rede</li>
+            <li>Escala de voluntariado</li>
+            <li>Pedido de oração e testemunho</li>
+            <li>Cadastro completo de visitantes</li>
+            <li>Identidade visual personalizada</li>
+            <li>Interface personalizada por rede</li>
+            <li>Presença por QR code e metas</li>
+            <li>Dashboard de liderança e de mídia</li>
+            <li>Importação de escala por planilha</li>
+            <li>Eventos com inscrição e pagamento parcelado</li>
+            <li>Site institucional completo</li>
+            <li>Agenda sincronizada entre app e site</li>
+            <li>Manutenção prioritária</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="pricing-footnote">O setup é pagamento único e pode ser parcelado em até 8x (exceto no plano anual à vista). Testadores do beta em Plus ou Pro têm 30% de desconto no setup + a primeira mensalidade grátis.</p>
+  </div>
+</section>
+
+<!-- ============ PLANOS DE PAGAMENTO ============ -->
+<section class="section" style="padding-top: 0;">
+  <div class="wrap">
+    <div class="section-head centered">
+      <h2>Escolha como pagar.</h2>
+      <p class="lead">A mensalidade acima é o valor cheio, sem fidelidade. Nos planos anuais, o valor da mensalidade sai mais em conta.</p>
+    </div>
+    <div class="problem-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="problem-card">
+        <h3>Mensal</h3>
+        <p>Valor cheio, sem fidelidade. Cancele quando quiser.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Anual parcelado</h3>
+        <p>Fidelidade de 12 meses, cobrado mês a mês no cartão, com 10% de desconto na mensalidade.</p>
+      </div>
+      <div class="problem-card">
+        <h3>Anual à vista</h3>
+        <p>Paga o setup e as 12 mensalidades de uma vez, com 20% de desconto na mensalidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final">
+  <div class="wrap">
+    <div>
+      <h2>Vamos organizar sua igreja juntos?</h2>
+      <p>Fala com a gente e descubra qual pacote combina com o momento da sua igreja.</p>
+    </div>
+    <a class="btn btn-primary" href="https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Tenho%20interesse%20na%20E-kko%20Church.">Falar no WhatsApp</a>
+  </div>
+</section>
+
+<footer class="site-footer" id="contato">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">e-<span>kko</span></div>
+        <p class="footer-tagline">Apps e plataformas digitais para igrejas e organizações.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/ekko.dev" aria-label="Instagram da e-kko" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 3.25.15 4.77 1.7 4.92 4.92.07 1.25.07 1.6.07 4.81 0 3.2 0 3.56-.07 4.81-.15 3.22-1.66 4.77-4.92 4.92-1.25.07-1.6.07-4.85.07-3.2 0-3.56 0-4.81-.07-3.26-.15-4.77-1.71-4.92-4.92C2.2 15.6 2.2 15.25 2.2 12c0-3.2 0-3.56.07-4.81.15-3.22 1.66-4.77 4.92-4.92C8.44 2.2 8.8 2.2 12 2.2Zm0 3.2a6.6 6.6 0 1 0 0 13.2 6.6 6.6 0 0 0 0-13.2Zm0 10.88a4.28 4.28 0 1 1 0-8.56 4.28 4.28 0 0 1 0 8.56Zm6.86-11.14a1.54 1.54 0 1 1-3.08 0 1.54 1.54 0 0 1 3.08 0Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navegação</div>
+        <ul class="footer-links">
+          <li><a href="index.html#quem-somos">Quem somos</a></li>
+          <li><a href="index.html#church">e-kko Church</a></li>
+          <li><a href="pacotes.html">Pacotes</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">e-kko Church</div>
+        <ul class="footer-links">
+          <li><a href="pacotes.html">Ver todos os pacotes</a></li>
+          <li><a href="index.html#church">O que está incluso</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contato</div>
+        <ul class="footer-links">
+          <li><a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1!%20Tenho%20interesse%20na%20E-kko%20Church." target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://instagram.com/ekko.dev" target="_blank" rel="noopener">@ekko.dev</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>e-kko — para servir quem serve.</span>
+      <span>© 2026 e-kko. Todos os direitos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
