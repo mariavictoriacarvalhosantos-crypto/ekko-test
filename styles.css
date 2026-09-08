@@ -29,7 +29,7 @@
   --step-small: 0.9375rem;
 
   --radius: 20px;
-  --content-width: 1120px;
+  --content-width: 1320px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -170,7 +170,7 @@ summary:focus-visible {
 }
 
 .hero .wrap {
-  max-width: 1400px;
+  max-width: 1520px;
   display: grid;
   grid-template-columns: 1.35fr 1fr;
   gap: 40px;
@@ -207,13 +207,13 @@ summary:focus-visible {
   color: var(--muted);
 }
 
-/* Mockup visual do app com anel "echo" — o único momento de animação da página */
+/* Espaço reservado do hero — por enquanto só o anel "echo", sem mockup */
 .hero-visual {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin-right: -8vw;
+  justify-content: center;
+  min-height: 420px;
 }
 
 .echo-ring {
@@ -284,7 +284,7 @@ summary:focus-visible {
 }
 
 .mockup-caption {
-  max-width: 1400px;
+  max-width: 1520px;
   margin: 14px auto 0;
   padding: 0 24px;
   font-size: 12.5px;
@@ -321,10 +321,10 @@ summary:focus-visible {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 28px;
+  padding: 36px 32px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
@@ -334,7 +334,7 @@ summary:focus-visible {
 }
 
 .problem-card h3 {
-  font-size: var(--step-h3);
+  font-size: 1.4375rem;
   font-weight: 600;
   color: var(--ink);
   transition: color 0.2s ease;
@@ -344,7 +344,8 @@ summary:focus-visible {
 
 .problem-card p {
   color: var(--muted);
-  font-size: var(--step-small);
+  font-size: 1.0625rem;
+  line-height: 1.5;
   transition: color 0.2s ease;
 }
 
@@ -549,14 +550,13 @@ summary:focus-visible {
   border-radius: var(--radius);
   background: var(--card-wash);
   border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-detail);
-  font-style: italic;
-  color: var(--muted);
-  text-align: center;
-  padding: 24px;
+  overflow: hidden;
+}
+
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .founder-quote {
