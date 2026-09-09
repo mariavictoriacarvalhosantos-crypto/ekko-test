@@ -114,7 +114,7 @@ summary:focus-visible {
   font-size: 1.25rem;
 }
 
-.logo span { color: var(--accent-lime); }
+.logo span { color: var(--ink); }
 
 .site-nav {
   display: flex;
@@ -244,7 +244,7 @@ summary:focus-visible {
 }
 
 .hero-title .highlight {
-  color: var(--accent);
+  color: var(--accent-lime);
 }
 
 .hero-sub {
