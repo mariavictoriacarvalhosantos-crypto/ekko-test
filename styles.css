@@ -261,11 +261,6 @@ summary:focus-visible {
   align-items: center;
 }
 
-.hero-note {
-  font-size: var(--step-small);
-  color: var(--muted);
-}
-
 .phone-mockup {
   position: relative;
   width: 240px;
@@ -390,6 +385,212 @@ summary:focus-visible {
 }
 
 .problem-card:hover p { color: rgba(255,255,255,0.75); }
+
+.feature-tag {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--card-wash);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.problem-card:hover .feature-tag {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--accent-lime);
+}
+
+/* ============================================
+   Carrossel reutilizável
+   (Como funciona / Para quem é)
+   ============================================ */
+
+.carousel {
+  position: relative;
+}
+
+.carousel-viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+  pointer-events: none;
+}
+
+.carousel-slide.is-active {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.carousel-slide.enter-right { transform: translateX(40px); opacity: 0; }
+.carousel-slide.enter-left { transform: translateX(-40px); opacity: 0; }
+.carousel-slide.exit-left { transform: translateX(-40px); opacity: 0; }
+.carousel-slide.exit-right { transform: translateX(40px); opacity: 0; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.18);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+.carousel-dot:hover {
+  background: rgba(0, 0, 0, 0.32);
+}
+
+.carousel-dot.active {
+  width: 26px;
+  background: var(--ink);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 1.125rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+  z-index: 2;
+}
+
+.carousel-arrow:hover { border-color: var(--ink); }
+.carousel-arrow.prev { left: 12px; }
+.carousel-arrow.next { right: 12px; }
+
+@media (max-width: 880px) {
+  .carousel-arrow { display: none; }
+}
+
+/* Card da seção "Como funciona" */
+
+.step-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 40px 56px;
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.step-counter {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.step-card h3 { font-size: 1.5rem; }
+
+.step-card p {
+  color: var(--muted);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+/* Card da seção "Para quem é" */
+
+.audience-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 40px 72px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr auto;
+  gap: 32px;
+  align-items: center;
+}
+
+.audience-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.625rem;
+}
+
+.audience-range {
+  margin-top: 6px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.audience-text {
+  color: var(--muted);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.audience-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.audience-cta-label {
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.audience-cta-plan {
+  font-weight: 700;
+  font-size: 1.0625rem;
+}
+
+.audience-cta .btn { margin-top: 10px; }
+
+@media (max-width: 880px) {
+  .step-card { padding: 32px 28px; }
+
+  .audience-card {
+    grid-template-columns: 1fr;
+    padding: 32px 28px;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .audience-cta { align-items: flex-start; }
+}
 
 /* ============================================
    Página dedicada de Pacotes (pacotes.html)
@@ -837,52 +1038,172 @@ summary:focus-visible {
 }
 
 /* ============================================
-   Quem está por trás
+   Bio / foto 4:5 reutilizável
+   (Sobre a E-kko na home, blocos de sobre.html)
    ============================================ */
 
-.about-founder .wrap {
+.bio-block {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
   gap: 56px;
   align-items: center;
 }
 
-.founder-photo {
+.bio-block.reverse {
+  grid-template-columns: 1.15fr 0.85fr;
+}
+
+.bio-block.reverse .bio-photo { order: 2; }
+.bio-block.reverse .bio-copy { order: 1; }
+
+.bio-photo {
   aspect-ratio: 4 / 5;
   border-radius: var(--radius);
-  background: var(--card-wash);
+  background: var(--surface);
   border: 1px solid var(--line);
   overflow: hidden;
 }
 
-.founder-photo img {
+.bio-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
-.founder-quote {
+.bio-photo.is-placeholder {
+  background: var(--card-wash);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-placeholder-logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  color: rgba(106, 3, 255, 0.25);
+}
+
+.photo-placeholder-logo span {
+  color: rgba(106, 3, 255, 0.45);
+}
+
+.bio-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.bio-fullname {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: var(--step-small);
+  font-weight: 500;
+}
+
+.bio-text {
+  margin-top: 20px;
+  color: var(--ink);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  max-width: 48ch;
+}
+
+.bio-copy h2 {
+  font-size: var(--step-h2);
+}
+
+.bio-copy p {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  max-width: 50ch;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 24px;
+  color: var(--accent);
+  font-size: var(--step-small);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.text-link:hover { color: var(--ink); }
+
+/* ============================================
+   Depoimentos (CSS pronto; seção comentada no HTML
+   até termos depoimentos reais autorizados)
+   ============================================ */
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial-quote {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(1.375rem, 2.4vw, 1.75rem);
-  line-height: 1.4;
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
 
-.founder-quote .accent-word {
-  font-family: var(--font-detail);
-  font-style: italic;
-  color: var(--accent);
-}
-
-.founder-name {
-  margin-top: 24px;
+.testimonial-name {
+  margin-top: auto;
   font-weight: 600;
   font-size: var(--step-small);
 }
 
-.founder-role {
+.testimonial-role {
   color: var(--muted);
-  font-size: var(--step-small);
+  font-size: 0.8125rem;
+}
+
+/* ============================================
+   Página Sobre (sobre.html)
+   ============================================ */
+
+.about-hero {
+  background: #FFFFFF;
+  padding: 72px 0 56px;
+  text-align: left;
+}
+
+.about-hero h1 {
+  font-size: var(--step-hero);
+  max-width: 16ch;
+}
+
+.about-hero p {
+  margin-top: 18px;
+  max-width: 56ch;
+  color: var(--muted);
+  font-size: 1.0625rem;
+}
+
+.about-closing-quote {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  line-height: 1.2;
+  max-width: 20ch;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* ============================================
@@ -1009,11 +1330,26 @@ summary:focus-visible {
 }
 
 /* ============================================
+   Âncoras do menu: compensar a altura do header fixo
+   ============================================ */
+
+#como-funciona,
+#para-quem,
+#pacotes,
+#duvidas,
+#sobre,
+#contato {
+  scroll-margin-top: 100px;
+}
+
+/* ============================================
    Responsivo
    ============================================ */
 
 @media (max-width: 1024px) {
   .problem-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
 
   .footer-top { grid-template-columns: 1.2fr 1fr 1fr; }
 }
@@ -1044,9 +1380,24 @@ summary:focus-visible {
 
   .price-card.featured { transform: none; }
 
-  .about-founder .wrap { grid-template-columns: 1fr; }
+  .bio-block,
+  .bio-block.reverse {
+    grid-template-columns: 1fr;
+  }
 
-  .founder-photo { max-width: 280px; margin: 0 auto; }
+  .bio-block .bio-photo,
+  .bio-block.reverse .bio-photo {
+    order: 0;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .bio-block .bio-copy,
+  .bio-block.reverse .bio-copy {
+    order: 1;
+  }
+
+  .testimonials-grid { grid-template-columns: 1fr; }
 
   .cta-final { padding: 48px 28px; }
 
