@@ -143,9 +143,12 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   letter-spacing: -0.01em;
   white-space: nowrap;
+  text-decoration: none;
   cursor: pointer;
   transition: background var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out), transform var(--dur-fast) var(--ease-out);
 }
+
+.btn:hover { text-decoration: none; }
 
 .btn:active { transform: scale(.97); }
 
@@ -312,7 +315,7 @@ img { max-width: 100%; display: block; }
 
 .hero-title {
   font-size: clamp(44px, 7vw, 84px);
-  line-height: 1.02;
+  line-height: 1.18;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   max-width: 13ch;
@@ -975,6 +978,7 @@ img { max-width: 100%; display: block; }
     gap: 20px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    padding-top: 20px;
     padding-bottom: 8px;
   }
 
