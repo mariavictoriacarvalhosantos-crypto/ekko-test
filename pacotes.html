@@ -3,72 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pacotes — E-kko Church</title>
-<meta name="description" content="Conheça os pacotes E-kko Church: Basic, Plus e Pro. Escolha o plano de pagamento e comece a organizar sua igreja.">
+<title>E-kko Church — planos e pacotes</title>
+<meta name="description" content="Conheça os pacotes E-kko Church: Basic, Plus e Pro. Escolha a forma de pagamento e comece a organizar sua igreja.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="index.html">e-<span>kko</span></a>
+    <a href="index.html" aria-label="E-kko">
+      <img class="logo-mark" src="assets/logo-wordmark-black.png" alt="E-kko">
+    </a>
     <nav class="site-nav">
-      <a href="index.html#como-funciona">Como funciona</a>
-      <a href="index.html#para-quem">Para quem é</a>
-      <a href="pacotes.html">Pacotes</a>
-      <a href="index.html#duvidas">Dúvidas</a>
-      <a href="index.html#contato">Contato</a>
+      <a href="index.html">Início</a>
+      <a href="pacotes.html" aria-current="page">E-kko Church</a>
+      <a href="sobre.html">Quem somos</a>
+      <a href="contato.html">Contato</a>
     </nav>
-    <a class="btn btn-ghost" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Quero%20conhecer%20a%20E-kko.">Fale com a gente</a>
+    <div class="header-cta">
+      <a class="btn btn-outline btn-sm" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Quero%20conhecer%20a%20E-kko." target="_blank" rel="noopener">Fale com a gente</a>
+    </div>
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
-      <span></span>
-      <span></span>
-      <span></span>
+      <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-x" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
   </div>
 </header>
 
 <nav class="mobile-menu" id="mobile-menu">
-  <a href="index.html#como-funciona">Como funciona</a>
-  <a href="index.html#para-quem">Para quem é</a>
-  <a href="pacotes.html">Pacotes</a>
-  <a href="index.html#duvidas">Dúvidas</a>
-  <a href="index.html#contato">Contato</a>
-  <a class="btn btn-primary" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Quero%20conhecer%20a%20E-kko.">Fale com a gente</a>
+  <a href="index.html">Início</a>
+  <a href="pacotes.html">E-kko Church</a>
+  <a href="sobre.html">Quem somos</a>
+  <a href="contato.html">Contato</a>
+  <a class="btn btn-dark btn-full" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Quero%20conhecer%20a%20E-kko." target="_blank" rel="noopener">Fale com a gente</a>
 </nav>
 
-<!-- ============ HERO DA PÁGINA DE PACOTES ============ -->
-<section class="plans-hero">
+<!-- ============ HERO ============ -->
+<section class="page-hero is-centered">
   <div class="wrap">
+    <span class="badge badge-beta">Beta · vagas limitadas</span>
     <h1>Um plano pro tamanho da sua igreja.</h1>
     <p>Da igreja que está começando à que já tem uma estrutura grande, tem um jeito certo de contar com a E-kko.</p>
   </div>
 </section>
 
-<!-- ============ PACOTES ============ -->
-<section class="section" id="pacotes">
+<!-- ============ MAIS DO QUE UM APP ============ -->
+<section class="section">
   <div class="wrap">
+    <div class="section-head">
+      <h2>Mais do que um app.</h2>
+      <p class="lead">Sem mais aviso perdido no grupo de WhatsApp, escala de última hora e informação espalhada. Tudo o que sua igreja precisa organizar, num só lugar, com a gente do seu lado.</p>
+    </div>
+    <div class="hover-grid">
+      <div class="hover-card">
+        <h3>Vídeo de treinamento</h3>
+        <p>Sua liderança aprende a usar o app do jeito certo, pra manter a organização sempre em dia e tirar dúvidas.</p>
+      </div>
+      <div class="hover-card">
+        <span class="feature-tag">No Pro</span>
+        <h3>Site exclusivo de gestão interna</h3>
+        <p>Um painel pra administrar tudo por trás do app: agenda, escalas e conteúdo, tudo num só lugar.</p>
+      </div>
+      <div class="hover-card">
+        <span class="feature-tag">No Plus e no Pro</span>
+        <h3>Site público da igreja</h3>
+        <p>Uma página oficial pra quem ainda não conhece a sua igreja chegar até ela.</p>
+      </div>
+      <div class="hover-card">
+        <h3>Manutenção inclusa</h3>
+        <p>Manutenção e atendimento direto sem custos extras, mesmo depois de fechar o plano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ESCOLHA COMO PAGAR / PACOTES ============ -->
+<section class="section pt-0" id="pacotes">
+  <div class="wrap">
+    <div class="section-head centered">
+      <h2>Escolha como pagar.</h2>
+      <p class="lead">Nos planos anuais, a mensalidade sai mais em conta.</p>
+    </div>
+
+    <div class="pay-tabs-wrap">
+      <div class="pay-tabs" role="tablist" aria-label="Forma de pagamento">
+        <button type="button" class="pay-tab" data-mode="m" role="tab" aria-selected="false">Mensal</button>
+        <button type="button" class="pay-tab" data-mode="ap" role="tab" aria-selected="true">Anual parcelado</button>
+        <button type="button" class="pay-tab" data-mode="av" role="tab" aria-selected="false">Anual à vista</button>
+      </div>
+      <p class="pay-desc">Fidelidade de 12 meses, cobrado mês a mês no cartão, com 10% de desconto na mensalidade.</p>
+    </div>
 
     <div class="pricing-grid">
 
       <!-- Pro (destaque) -->
-      <div class="price-card featured">
+      <div class="price-card featured" data-plan="pro">
         <span class="plan-badge">Mais vantajoso</span>
         <div class="plan-name">E-kko Pro</div>
         <p class="plan-sub">Pra igrejas grandes: app completo + site institucional + site de gestão interna.</p>
         <p class="plan-audience">Recomendado para igrejas com mais de 200 membros</p>
-        <div class="price-tag">R$405<span>/mês</span></div>
-        <p class="price-desc">Setup único de R$900 (parcelável em até 3x)</p>
+        <div class="price-row">
+          <s class="price-old">R$450</s>
+          <span class="price-amount">R$405</span>
+          <span class="price-unit">/mês</span>
+        </div>
+        <p class="setup-line">Setup único de R$900 (parcelável em até 3x)</p>
         <span class="fidelity-tag">12 meses de fidelidade</span>
-        <a class="btn btn-primary" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Pro%20da%20E-kko%20Church.">Falar com a gente</a>
+        <a class="btn btn-primary btn-full" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Pro%20da%20E-kko%20Church." target="_blank" rel="noopener">Falar com a gente</a>
         <div class="includes-block">
           <span class="includes-label">O que está incluso</span>
           <ul class="includes">
-            <li>Agenda com segmentação por rede</li>
-            <li>Escala de voluntariado</li>
-            <li>Pedido de oração e testemunho</li>
-            <li>Cadastro completo de visitantes</li>
-            <li>Identidade visual personalizada</li>
+            <li class="is-included">Agenda com segmentação por rede</li>
+            <li class="is-included">Escala de voluntariado</li>
+            <li class="is-included">Pedido de oração e testemunho</li>
+            <li class="is-included">Cadastro completo de visitantes</li>
+            <li class="is-included">Identidade visual personalizada</li>
+            <li class="is-included">Interface personalizada por rede</li>
+            <li class="is-included">Últimos vídeos publicados no YouTube</li>
+            <li class="is-included">Presença por QR code e metas</li>
+            <li class="is-included">Dashboard de redes e ministérios</li>
+            <li class="is-included">Vídeo de treinamento para o app</li>
+            <li class="is-included">Site institucional completo</li>
+            <li class="is-included">Site de gestão interna</li>
+            <li class="is-included">Manutenção e atendimento</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Plus -->
+      <div class="price-card" data-plan="plus">
+        <div class="plan-name">E-kko Plus</div>
+        <p class="plan-sub">O app completo + site institucional, com tudo que uma igreja precisa no dia a dia.</p>
+        <p class="plan-audience">Recomendado para igrejas com mais de 200 membros</p>
+        <div class="price-row">
+          <s class="price-old">R$290</s>
+          <span class="price-amount">R$261</span>
+          <span class="price-unit">/mês</span>
+        </div>
+        <p class="setup-line">Setup único de R$580 (parcelável em até 3x)</p>
+        <span class="fidelity-tag">12 meses de fidelidade</span>
+        <a class="btn btn-outline btn-full" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Plus%20da%20E-kko%20Church." target="_blank" rel="noopener">Falar com a gente</a>
+        <div class="includes-block">
+          <span class="includes-label">O que está incluso</span>
+          <ul class="includes">
+            <li class="is-included">Agenda com segmentação por rede</li>
+            <li class="is-included">Escala de voluntariado</li>
+            <li class="is-included">Pedido de oração e testemunho</li>
+            <li class="is-included">Cadastro completo de visitantes</li>
+            <li class="is-included">Identidade visual personalizada</li>
+            <li class="is-included">Interface personalizada por rede</li>
+            <li class="is-included">Últimos vídeos publicados no YouTube</li>
+            <li class="is-included">Presença por QR code e metas</li>
+            <li class="is-included">Dashboard de redes e ministérios</li>
+            <li class="is-included">Vídeo de treinamento para o app</li>
+            <li class="is-included">Site institucional completo</li>
+            <li>Site de gestão interna</li>
+            <li class="is-included">Manutenção e atendimento</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Basic -->
+      <div class="price-card" data-plan="basic">
+        <div class="plan-name">E-kko Basic</div>
+        <p class="plan-sub">O essencial pra organizar sua igreja: agenda, escala e comunicação.</p>
+        <p class="plan-audience">Recomendado para igrejas com até 200 membros</p>
+        <div class="price-row">
+          <s class="price-old">R$180</s>
+          <span class="price-amount">R$162</span>
+          <span class="price-unit">/mês</span>
+        </div>
+        <p class="setup-line">Setup único de R$360 (parcelável em até 3x)</p>
+        <span class="fidelity-tag">12 meses de fidelidade</span>
+        <a class="btn btn-outline btn-full" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Basic%20da%20E-kko%20Church." target="_blank" rel="noopener">Falar com a gente</a>
+        <div class="includes-block">
+          <span class="includes-label">O que está incluso</span>
+          <ul class="includes">
+            <li class="is-included">Agenda com segmentação por rede</li>
+            <li class="is-included">Escala de voluntariado</li>
+            <li class="is-included">Pedido de oração e testemunho</li>
+            <li class="is-included">Cadastro completo de visitantes</li>
+            <li class="is-included">Identidade visual personalizada</li>
             <li>Interface personalizada por rede</li>
             <li>Últimos vídeos publicados no YouTube</li>
             <li>Presença por QR code e metas</li>
@@ -76,272 +191,92 @@
             <li>Vídeo de treinamento para o app</li>
             <li>Site institucional completo</li>
             <li>Site de gestão interna</li>
-            <li>Manutenção e atendimento</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Plus -->
-      <div class="price-card">
-        <div class="plan-name">E-kko Plus</div>
-        <p class="plan-sub">O app completo + site institucional, com tudo que uma igreja precisa no dia a dia.</p>
-        <p class="plan-audience">Recomendado para igrejas com mais de 200 membros</p>
-        <div class="price-tag">R$261<span>/mês</span></div>
-        <p class="price-desc">Setup único de R$580 (parcelável em até 3x)</p>
-        <span class="fidelity-tag">12 meses de fidelidade</span>
-        <a class="btn btn-ghost" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Plus%20da%20E-kko%20Church.">Falar com a gente</a>
-        <div class="includes-block">
-          <span class="includes-label">O que está incluso</span>
-          <ul class="includes">
-            <li>Agenda com segmentação por rede</li>
-            <li>Escala de voluntariado</li>
-            <li>Pedido de oração e testemunho</li>
-            <li>Cadastro completo de visitantes</li>
-            <li>Identidade visual personalizada</li>
-            <li>Interface personalizada por rede</li>
-            <li>Últimos vídeos publicados no YouTube</li>
-            <li>Presença por QR code e metas</li>
-            <li>Dashboard de redes e ministérios</li>
-            <li>Vídeo de treinamento para o app</li>
-            <li>Site institucional completo</li>
-            <li class="not-included">Site de gestão interna</li>
-            <li>Manutenção e atendimento</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Basic -->
-      <div class="price-card">
-        <div class="plan-name">E-kko Basic</div>
-        <p class="plan-sub">O essencial pra organizar sua igreja: agenda, escala e comunicação.</p>
-        <p class="plan-audience">Recomendado para igrejas com até 200 membros</p>
-        <div class="price-tag">R$162<span>/mês</span></div>
-        <p class="price-desc">Setup único de R$360 (parcelável em até 3x)</p>
-        <span class="fidelity-tag">12 meses de fidelidade</span>
-        <a class="btn btn-ghost" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Tenho%20interesse%20no%20pacote%20Basic%20da%20E-kko%20Church.">Falar com a gente</a>
-        <div class="includes-block">
-          <span class="includes-label">O que está incluso</span>
-          <ul class="includes">
-            <li>Agenda com segmentação por rede</li>
-            <li>Escala de voluntariado</li>
-            <li>Pedido de oração e testemunho</li>
-            <li>Cadastro completo de visitantes</li>
-            <li>Identidade visual personalizada</li>
-            <li class="not-included">Interface personalizada por rede</li>
-            <li class="not-included">Últimos vídeos publicados no YouTube</li>
-            <li class="not-included">Presença por QR code e metas</li>
-            <li class="not-included">Dashboard de redes e ministérios</li>
-            <li class="not-included">Vídeo de treinamento para o app</li>
-            <li class="not-included">Site institucional completo</li>
-            <li class="not-included">Site de gestão interna</li>
-            <li>Manutenção e atendimento</li>
+            <li class="is-included">Manutenção e atendimento</li>
           </ul>
         </div>
       </div>
 
     </div>
 
-    <p class="pricing-footnote">Valores acima já com o desconto do plano anual parcelado, cobrado mês a mês no cartão (fidelidade de 12 meses) — confira todas as formas de pagamento mais abaixo. O setup é pagamento único, equivalente a 2x o valor da mensalidade, e pode ser parcelado em até 3x (exceto no plano anual à vista). Testadores do beta em Plus ou Pro têm 30% de desconto no setup + a primeira mensalidade grátis.</p>
+    <p class="pricing-footnote">O setup é pagamento único, equivalente a 2x o valor da mensalidade, e pode ser parcelado em até 3x (exceto no plano anual à vista). Testadores do beta em Plus ou Pro têm 30% de desconto no setup + a primeira mensalidade grátis.</p>
   </div>
 </section>
 
-<!-- ============ COMPARATIVO ============ -->
-<section class="section" style="padding-top: 0;">
-  <div class="wrap">
-    <div class="section-head centered">
-      <h2>Compare os benefícios de cada plano.</h2>
-      <p class="lead">Veja lado a lado o que cada pacote inclui e escolha o que faz mais sentido pra sua igreja hoje.</p>
-    </div>
-    <div class="compare-table-wrap">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th>Benefício</th>
-            <th>Pro</th>
-            <th>Plus</th>
-            <th>Basic</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Agenda com segmentação por rede</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-          </tr>
-          <tr>
-            <td>Escala de voluntariado</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-          </tr>
-          <tr>
-            <td>Pedido de oração e testemunho</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-          </tr>
-          <tr>
-            <td>Cadastro completo de visitantes</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-          </tr>
-          <tr>
-            <td>Identidade visual personalizada</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-          </tr>
-          <tr>
-            <td>Interface personalizada por rede</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon no">×</span></td>
-          </tr>
-          <tr>
-            <td>Últimos vídeos publicados no YouTube</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon no">×</span></td>
-          </tr>
-          <tr>
-            <td>Presença por QR code e metas</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon no">×</span></td>
-          </tr>
-          <tr>
-            <td>Dashboard de redes e ministérios</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon no">×</span></td>
-          </tr>
-          <tr>
-            <td>Vídeo de treinamento para o app</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon no">×</span></td>
-          </tr>
-          <tr>
-            <td>Site institucional completo</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon no">×</span></td>
-          </tr>
-          <tr>
-            <td>Site de gestão interna</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon no">×</span></td>
-            <td><span class="table-icon no">×</span></td>
-          </tr>
-          <tr>
-            <td>Manutenção e atendimento</td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-            <td><span class="table-icon yes">✓</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PLANOS DE PAGAMENTO ============ -->
-<section class="section" style="padding-top: 0;">
-  <div class="wrap">
-    <div class="section-head centered">
-      <h2>Escolha como pagar.</h2>
-      <p class="lead">Veja o valor de cada plano dentro de cada forma de pagamento. Nos planos anuais, a mensalidade sai mais em conta.</p>
-    </div>
-    <div class="payment-bars">
-      <div class="problem-card payment-bar">
-        <h3 class="payment-bar-name">Mensal</h3>
-        <p class="payment-bar-desc">Valor cheio, sem fidelidade. Cancele quando quiser.</p>
-        <ul class="payment-prices">
-          <li><span>Basic</span><strong>R$180<small>/mês</small></strong></li>
-          <li><span>Plus</span><strong>R$290<small>/mês</small></strong></li>
-          <li><span>Pro</span><strong>R$450<small>/mês</small></strong></li>
-        </ul>
-      </div>
-      <div class="problem-card payment-bar">
-        <h3 class="payment-bar-name">Anual parcelado</h3>
-        <p class="payment-bar-desc">Fidelidade de 12 meses, cobrado mês a mês no cartão, com 10% de desconto na mensalidade.</p>
-        <ul class="payment-prices">
-          <li><span>Basic</span><span class="price-pair"><s class="price-old">R$180<small>/mês</small></s><strong class="price-new">R$162<small>/mês</small></strong></span></li>
-          <li><span>Plus</span><span class="price-pair"><s class="price-old">R$290<small>/mês</small></s><strong class="price-new">R$261<small>/mês</small></strong></span></li>
-          <li><span>Pro</span><span class="price-pair"><s class="price-old">R$450<small>/mês</small></s><strong class="price-new">R$405<small>/mês</small></strong></span></li>
-        </ul>
-      </div>
-      <div class="problem-card payment-bar">
-        <h3 class="payment-bar-name">Anual à vista</h3>
-        <p class="payment-bar-desc">Paga o setup e as 12 mensalidades de uma vez, com 20% de desconto na mensalidade.</p>
-        <ul class="payment-prices">
-          <li><span>Basic</span><span class="price-pair"><s class="price-old">R$2.520</s><strong class="price-new">R$2.016<small>à vista</small></strong></span></li>
-          <li><span>Plus</span><span class="price-pair"><s class="price-old">R$4.060</s><strong class="price-new">R$3.248<small>à vista</small></strong></span></li>
-          <li><span>Pro</span><span class="price-pair"><s class="price-old">R$6.300</s><strong class="price-new">R$5.040<small>à vista</small></strong></span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="section" id="faq" style="padding-top: 0;">
+<!-- ============ PERGUNTAS FREQUENTES ============ -->
+<section class="section pt-0" id="duvidas">
   <div class="wrap">
     <div class="section-head centered">
       <h2>Perguntas frequentes.</h2>
       <p class="lead">Ainda com dúvida sobre algum pacote? Fala com a gente pelo WhatsApp que a gente te ajuda a escolher.</p>
     </div>
     <div class="faq-list">
-      <details class="faq-item">
+      <details class="faq-item" name="church-faq">
         <summary>O que é o setup?</summary>
         <p>É a taxa única de implementação do seu plano: cobre a configuração do app, a identidade visual personalizada e a estruturação inicial de agenda, escalas e cadastros da sua igreja. É cobrada uma única vez, na contratação, e pode ser parcelada em até 3x.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" name="church-faq">
         <summary>Quais são as formas de pagamento?</summary>
         <p>Você escolhe entre mensal (valor cheio, sem fidelidade, cancele quando quiser), anual parcelado (fidelidade de 12 meses, cobrado mês a mês com 10% de desconto na mensalidade) ou anual à vista (paga o setup e as 12 mensalidades de uma vez, com 20% de desconto na mensalidade).</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" name="church-faq">
+        <summary>O que significa "12 meses de fidelidade"?</summary>
+        <p>Que o plano tem duração de um ano. Em troca, você paga menos por mês do que no plano sem fidelidade.</p>
+      </details>
+      <details class="faq-item" name="church-faq">
         <summary>Posso alterar de plano depois de contratar?</summary>
         <p>Pode fazer upgrade a qualquer momento. Você paga a diferença do setup e, a partir da próxima cobrança, passa a pagar o valor do novo pacote. Não é possível fazer downgrade.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" name="church-faq">
         <summary>O domínio do site institucional é da minha igreja?</summary>
         <p>Sim. Nos planos Plus e Pro, o site institucional completo é publicado no domínio da sua igreja e fica sincronizado com as informações do app.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" name="church-faq">
         <summary>O que é o site de gestão interna?</summary>
-        <p>É um painel exclusivo, por trás do app, pra sua liderança administrar tudo num só lugar — agenda, escalas, conteúdo e cadastros — sem depender de planilhas soltas ou vários grupos de WhatsApp.</p>
+        <p>É um painel exclusivo, por trás do app, pra sua liderança administrar tudo num só lugar: agenda, escalas, conteúdo e cadastros, sem depender de planilhas soltas ou vários grupos de WhatsApp.</p>
       </details>
-      <details class="faq-item">
+      <details class="faq-item" name="church-faq">
         <summary>Como funciona o cancelamento?</summary>
         <p>Pode cancelar quando quiser. No plano mensal, não é cobrada nenhuma taxa. Nos planos com fidelidade, é cobrada uma taxa de acordo com a porcentagem prevista em contrato.</p>
+      </details>
+      <details class="faq-item" name="church-faq">
+        <summary>E os dados dos membros?</summary>
+        <p>Os dados ficam protegidos e são usados só pro funcionamento do app, seguindo a LGPD.</p>
       </details>
     </div>
   </div>
 </section>
 
 <!-- ============ CTA FINAL ============ -->
-<section class="cta-final">
+<div class="cta-final">
+  <div class="echo-rings" style="width:520px;height:520px;right:-180px;top:-120px;opacity:.22" aria-hidden="true">
+    <span class="ring" style="width:16.667%;height:16.667%;left:50%;top:50%;transform:translate(-50%,-50%);border:1.5px solid var(--ekko-lime);opacity:1"></span>
+    <span class="ring" style="width:33.333%;height:33.333%;left:50%;top:50%;transform:translate(-50%,-50%);border:1.5px solid var(--ekko-lime);opacity:.8833"></span>
+    <span class="ring" style="width:50%;height:50%;left:50%;top:50%;transform:translate(-50%,-50%);border:1.5px solid var(--ekko-lime);opacity:.7667"></span>
+    <span class="ring" style="width:66.667%;height:66.667%;left:50%;top:50%;transform:translate(-50%,-50%);border:1.5px solid var(--ekko-lime);opacity:.65"></span>
+    <span class="ring" style="width:83.333%;height:83.333%;left:50%;top:50%;transform:translate(-50%,-50%);border:1.5px solid var(--ekko-lime);opacity:.5333"></span>
+    <span class="ring" style="width:100%;height:100%;left:50%;top:50%;transform:translate(-50%,-50%);border:1.5px solid var(--ekko-lime);opacity:.4167"></span>
+  </div>
   <div class="wrap">
     <div>
       <h2>Vamos melhorar a sua organização?</h2>
       <p>Conta pra gente como a sua organização funciona hoje e a gente te mostra a melhor opção, sem compromisso.</p>
     </div>
-    <a class="btn btn-primary" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Quero%20conhecer%20a%20E-kko.">Fale com a gente</a>
+    <a class="btn btn-primary btn-lg" href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Quero%20conhecer%20a%20E-kko." target="_blank" rel="noopener">Fale com a gente</a>
   </div>
-</section>
+</div>
 
-<footer class="site-footer" id="contato">
+<footer class="site-footer">
   <div class="wrap">
     <div class="footer-top">
-      <div class="footer-brand">
-        <div class="logo">e-<span>kko</span></div>
+      <div>
+        <img src="assets/logo-wordmark-white.png" alt="E-kko" style="height:26px;display:block">
         <p class="footer-tagline">Apps e plataformas digitais para igrejas e organizações.</p>
         <div class="footer-social">
-          <a href="https://instagram.com/ekko.dev" aria-label="Instagram da E-kko" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.85.07 3.25.15 4.77 1.7 4.92 4.92.07 1.25.07 1.6.07 4.81 0 3.2 0 3.56-.07 4.81-.15 3.22-1.66 4.77-4.92 4.92-1.25.07-1.6.07-4.85.07-3.2 0-3.56 0-4.81-.07-3.26-.15-4.77-1.71-4.92-4.92C2.2 15.6 2.2 15.25 2.2 12c0-3.2 0-3.56.07-4.81.15-3.22 1.66-4.77 4.92-4.92C8.44 2.2 8.8 2.2 12 2.2Zm0 3.2a6.6 6.6 0 1 0 0 13.2 6.6 6.6 0 0 0 0-13.2Zm0 10.88a4.28 4.28 0 1 1 0-8.56 4.28 4.28 0 0 1 0 8.56Zm6.86-11.14a1.54 1.54 0 1 1-3.08 0 1.54 1.54 0 0 1 3.08 0Z"/></svg>
+          <a href="https://instagram.com/ekko.dev" target="_blank" rel="noopener" aria-label="Instagram da E-kko">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg>
+          </a>
+          <a href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Quero%20conhecer%20a%20E-kko." target="_blank" rel="noopener" aria-label="WhatsApp da E-kko">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           </a>
         </div>
       </div>
@@ -349,19 +284,15 @@
         <div class="footer-col-title">E-kko Church</div>
         <ul class="footer-links">
           <li><a href="index.html#como-funciona">Como funciona</a></li>
-          <li><a href="index.html#para-quem">Para quem é</a></li>
           <li><a href="pacotes.html">Pacotes</a></li>
-          <li><a href="index.html#duvidas">Dúvidas frequentes</a></li>
+          <li><a href="pacotes.html#duvidas">Dúvidas frequentes</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">Empresa</div>
         <ul class="footer-links">
-          <li><a href="sobre.html">Sobre nós</a></li>
-          <!-- Ativar quando as páginas estiverem prontas:
-          <li><a href="termos.html">Termos de uso</a></li>
-          <li><a href="privacidade.html">Política de privacidade</a></li>
-          -->
+          <li><a href="sobre.html">Quem somos</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
       <div>
@@ -369,15 +300,11 @@
         <ul class="footer-links">
           <li><a href="https://wa.me/5521965286132?text=Ol%C3%A1!%20Quero%20conhecer%20a%20E-kko." target="_blank" rel="noopener">WhatsApp (21) 96528-6132</a></li>
           <li><a href="https://instagram.com/ekko.dev" target="_blank" rel="noopener">@ekko.dev</a></li>
-          <!-- Preencher quando tivermos um e-mail de contato:
-          <li><a href="mailto:contato@ekko.dev">contato@ekko.dev</a></li>
-          -->
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>E-kko, para servir quem serve.</span>
-      <!-- Trocar por "© 2026 E-kko Company · CNPJ 00.000.000/0000-00" quando tivermos o CNPJ -->
       <span>© 2026 E-kko Company. Todos os direitos reservados.</span>
     </div>
   </div>

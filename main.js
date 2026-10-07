@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
-  initCardReveal();
   initCarousels();
+  initPaymentTabs();
 });
 
 function initMobileMenu() {
@@ -26,32 +26,10 @@ function initMobileMenu() {
   });
 }
 
-function initCardReveal() {
-  const cards = document.querySelectorAll('.problem-card');
-  if (!cards.length) return;
-
-  if (!('IntersectionObserver' in window)) {
-    cards.forEach((card) => card.classList.add('in-view'));
-    return;
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        const delay = index * 80;
-        setTimeout(() => entry.target.classList.add('in-view'), delay);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  cards.forEach((card) => observer.observe(card));
-}
-
 /**
- * Carrossel reutilizável: um slide por vez, com animação de slide + fade,
- * bolinhas clicáveis, setas (desktop), swipe (touch) e setas do teclado.
- * Marque o container com [data-carousel] e cada slide com .carousel-slide.
+ * Carrossel reutilizável: um slide por vez, slide horizontal + fade (56px,
+ * 450ms), bolinhas clicáveis, setas ao lado do card, swipe no celular e
+ * setas do teclado. Marque o container com [data-carousel].
  */
 function initCarousels() {
   document.querySelectorAll('[data-carousel]').forEach(initCarousel);
@@ -63,18 +41,17 @@ function initCarousel(root) {
   const dotsWrap = root.querySelector('.carousel-dots');
   const prevBtn = root.querySelector('.carousel-arrow.prev');
   const nextBtn = root.querySelector('.carousel-arrow.next');
+  const focusTarget = root.querySelector('.carousel-row') || root;
   const count = slides.length;
   if (!viewport || !count) return;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let index = 0;
 
-  // Contadores "1 de N" dentro de cada slide, se existirem.
   root.querySelectorAll('[data-step-counter]').forEach((el, i) => {
     el.textContent = (i + 1) + ' de ' + count;
   });
 
-  // Bolinhas de navegação, geradas a partir da quantidade real de slides.
   const dots = [];
   if (dotsWrap) {
     dotsWrap.innerHTML = '';
@@ -91,9 +68,7 @@ function initCarousel(root) {
 
   function recalcHeight() {
     let max = 0;
-    slides.forEach((slide) => {
-      max = Math.max(max, slide.offsetHeight);
-    });
+    slides.forEach((slide) => { max = Math.max(max, slide.offsetHeight); });
     viewport.style.height = max + 'px';
   }
 
@@ -115,8 +90,7 @@ function initCarousel(root) {
       outgoing.classList.add(direction === 'next' ? 'exit-left' : 'exit-right');
       active.classList.add(direction === 'next' ? 'enter-right' : 'enter-left');
       // força o navegador a registrar o estado inicial antes de animar
-      // eslint-disable-next-line no-unused-expressions
-      active.offsetHeight;
+      void active.offsetHeight;
       requestAnimationFrame(() => {
         active.classList.remove('enter-right', 'enter-left');
         active.classList.add('is-active');
@@ -129,8 +103,6 @@ function initCarousel(root) {
     }
 
     dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-    if (prevBtn) prevBtn.setAttribute('aria-label', 'Anterior');
-    if (nextBtn) nextBtn.setAttribute('aria-label', 'Próximo');
   }
 
   function goTo(newIndex) {
@@ -147,8 +119,8 @@ function initCarousel(root) {
   if (prevBtn) prevBtn.addEventListener('click', () => goTo(index - 1));
   if (nextBtn) nextBtn.addEventListener('click', () => goTo(index + 1));
 
-  root.setAttribute('tabindex', root.getAttribute('tabindex') || '0');
-  root.addEventListener('keydown', (e) => {
+  focusTarget.setAttribute('tabindex', focusTarget.getAttribute('tabindex') || '0');
+  focusTarget.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') { e.preventDefault(); goTo(index + 1); }
     if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(index - 1); }
   });
@@ -178,4 +150,71 @@ function initCarousel(root) {
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(recalcHeight).catch(() => {});
   }
+}
+
+/**
+ * Abas de forma de pagamento (Mensal / Anual parcelado / Anual à vista):
+ * trocam o preço, o texto do setup e a etiqueta de fidelidade dos 3 cards
+ * de plano. Valores vêm de CHURCH_PLANS (mesmos do reference ChurchPage).
+ */
+const CHURCH_PLANS = {
+  pro: { setup: 'R$900', m: 'R$450', ap: 'R$405', av: 'R$5.040', avOld: 'R$6.300' },
+  plus: { setup: 'R$580', m: 'R$290', ap: 'R$261', av: 'R$3.248', avOld: 'R$4.060' },
+  basic: { setup: 'R$360', m: 'R$180', ap: 'R$162', av: 'R$2.016', avOld: 'R$2.520' },
+};
+
+function initPaymentTabs() {
+  const tabs = document.querySelectorAll('.pay-tab');
+  const cards = document.querySelectorAll('.price-card[data-plan]');
+  const descEl = document.querySelector('.pay-desc');
+  if (!tabs.length || !cards.length) return;
+
+  const descriptions = {
+    m: 'Valor cheio, sem fidelidade. Cancele quando quiser.',
+    ap: 'Fidelidade de 12 meses, cobrado mês a mês no cartão, com 10% de desconto na mensalidade.',
+    av: 'Paga o setup e as 12 mensalidades de uma vez, com 20% de desconto na mensalidade.',
+  };
+
+  function setMode(mode) {
+    tabs.forEach((tab) => {
+      tab.setAttribute('aria-selected', String(tab.dataset.mode === mode));
+    });
+
+    if (descEl) descEl.textContent = descriptions[mode];
+
+    cards.forEach((card) => {
+      const plan = CHURCH_PLANS[card.dataset.plan];
+      if (!plan) return;
+
+      const oldEl = card.querySelector('.price-old');
+      const amountEl = card.querySelector('.price-amount');
+      const unitEl = card.querySelector('.price-unit');
+      const setupEl = card.querySelector('.setup-line');
+      const fidelityEl = card.querySelector('.fidelity-tag');
+
+      const showOld = mode !== 'm';
+      if (oldEl) {
+        oldEl.hidden = !showOld;
+        oldEl.textContent = mode === 'av' ? plan.avOld : plan.m;
+      }
+
+      if (amountEl) amountEl.textContent = mode === 'av' ? plan.av : plan[mode];
+      if (unitEl) unitEl.textContent = mode === 'av' ? 'à vista' : '/mês';
+
+      if (setupEl) {
+        setupEl.textContent = mode === 'av'
+          ? 'Setup incluso no valor'
+          : 'Setup único de ' + plan.setup + ' (parcelável em até 3x)';
+      }
+
+      if (fidelityEl) fidelityEl.hidden = mode === 'm';
+    });
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => setMode(tab.dataset.mode));
+  });
+
+  const initial = document.querySelector('.pay-tab[aria-selected="true"]');
+  setMode(initial ? initial.dataset.mode : 'ap');
 }
