@@ -1172,3 +1172,150 @@ img { max-width: 100%; display: block; }
 #como-funciona, #para-quem, #pacotes, #duvidas, #contato-section {
   scroll-margin-top: 100px;
 }
+
+/* Aviso de consentimento abaixo de botões de WhatsApp (cards de pacotes e CTA final da home) */
+.consent-note {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.consent-note a {
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+.consent-note a:hover { color: var(--muted); }
+
+.price-card.featured .consent-note,
+.price-card.featured .consent-note a {
+  color: rgba(255,255,255,.68);
+}
+
+.cta-final-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.cta-final .consent-note,
+.cta-final .consent-note a {
+  color: rgba(255,255,255,.55);
+}
+
+/* ============================================
+   Página: Política de Privacidade
+   ============================================ */
+
+.policy-page { padding: 64px 0 96px; }
+
+.policy-content { max-width: 760px; margin: 0 auto; text-align: left; }
+
+.policy-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.policy-meta {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.policy-toc {
+  margin-top: 40px;
+  padding: 24px 28px;
+  background: var(--sunken);
+  border-radius: var(--radius-card);
+}
+
+.policy-toc-title {
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--muted);
+  margin: 0 0 14px;
+}
+
+.policy-toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 32px;
+}
+
+.policy-toc li { font-size: 15px; line-height: 1.4; }
+
+.policy-toc a {
+  color: var(--ekko-black);
+  text-decoration: none;
+}
+
+.policy-toc a:hover { color: var(--ekko-purple); text-decoration: underline; }
+
+.policy-content h2 {
+  margin-top: 64px;
+  padding-left: 18px;
+  border-left: 3px solid var(--ekko-lime);
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.6vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  scroll-margin-top: 100px;
+}
+
+.policy-content h2:first-of-type { margin-top: 48px; }
+
+.policy-content p { margin-top: 16px; font-size: 16px; line-height: 1.7; }
+
+.policy-content ul, .policy-content ol {
+  margin-top: 16px;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.policy-content li { font-size: 16px; line-height: 1.6; }
+
+.policy-content strong { font-weight: 600; }
+
+.policy-content .table-wrap {
+  margin-top: 20px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.policy-content table { width: 100%; border-collapse: collapse; min-width: 480px; }
+
+.policy-content th, .policy-content td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14.5px;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-content th { background: var(--sunken); font-weight: 600; white-space: nowrap; }
+
+.policy-content tr:last-child td { border-bottom: none; }
+
+.policy-content .ver {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .policy-toc ul { grid-template-columns: 1fr; }
+}
