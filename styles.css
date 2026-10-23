@@ -1316,6 +1316,8 @@ img { max-width: 100%; display: block; }
 
 .policy-content tr:last-child td { border-bottom: none; }
 
+.policy-content .policy-dpo-cta { margin-top: 28px; }
+
 .policy-content .ver,
 .policy-content .policy-version {
   margin-top: 56px;
