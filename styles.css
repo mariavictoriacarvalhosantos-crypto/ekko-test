@@ -1226,6 +1226,14 @@ img { max-width: 100%; display: block; }
   font-size: 14px;
 }
 
+.policy-content .policy-intro {
+  margin-top: 24px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
 .policy-toc {
   margin-top: 40px;
   padding: 24px 28px;
@@ -1308,7 +1316,8 @@ img { max-width: 100%; display: block; }
 
 .policy-content tr:last-child td { border-bottom: none; }
 
-.policy-content .ver {
+.policy-content .ver,
+.policy-content .policy-version {
   margin-top: 56px;
   padding-top: 24px;
   border-top: 1px solid var(--line);
